@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Colores base de la marca -->
+    <color name="color_primary">#935340</color>
+    <color name="color_secundary">#775750</color>
+    <color name="color_card_background">#D9FCE3DD</color>
+    <color name="color_background_screen">#FDFBF7</color>
+
+
+    <!-- Colores de texto -->
+    <color name="color_text_title">#231917</color>
+    <color name="color_text_primary">#935340</color>
+    <color name="color_text_hint">#707070</color>
+    <color name="color_text_secundary">#FDFBF7</color>
+    <!-- Bordes y divisores -->
+    <color name="color_input_border">#99935340</color>
 </resources>
