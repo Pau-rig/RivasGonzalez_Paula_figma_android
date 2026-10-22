@@ -12,6 +12,7 @@
     <color name="color_text_primary">#935340</color>
     <color name="color_text_hint">#707070</color>
     <color name="color_text_secundary">#FDFBF7</color>
+
     <!-- Bordes y divisores -->
     <color name="color_input_border">#99935340</color>
 </resources>
