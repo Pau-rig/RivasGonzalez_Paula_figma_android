@@ -10,14 +10,15 @@
 
     <!-- icono de la empresa -->
     <ImageView
+        android:id="@+id/iv_Litteltous"
         android:layout_width="83dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/iv_litteltous"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null"/>
 
     <!-- Logo de la empresa -->
     <ImageView
@@ -26,6 +27,7 @@
         android:layout_width="181dp"
         android:layout_height="149dp"
         android:src="@drawable/iv_logo"
+        android:contentDescription="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -45,114 +47,123 @@
         android:layout_marginEnd="15dp">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="24dp">
-
-        <!-- Título: Iniciar Sesión -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login_title"
-            android:textColor="@color/color_text_title"
-            style="@style/titlePrincipal"/>
-
-        <!-- EditText: Correo -->
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/editText"
-            android:layout_marginTop="16dp"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"/>
-
-        <!-- EditText: Contraseña -->
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/editText"
-            android:layout_marginTop="16dp"
-            android:hint="@string/hint_password"
-            android:inputType="textEmailAddress"/>
-
-        <!-- Boton: Continuar -->
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/btn_continue"
-            style="@style/bntPrincipal"/>
-
-        <!-- Text: Olvidar -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/textPrincipal"
-            android:layout_marginTop="12dp"
-            android:text="@string/forgot_password"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="16dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="@color/color_primary"/>
-
+            <!-- Título: Iniciar Sesión -->
             <TextView
+                android:id="@+id/tv_title_Login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/textEnlace"
-                android:paddingHorizontal="8dp"
-                android:text="@string/divider_or"/>
+                android:text="@string/login_title"
+                style="@style/titlePrincipal"/>
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="@color/color_primary"/>
+            <!-- EditText: Correo -->
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"/>
+
+            <!-- EditText: Contraseña -->
+            <EditText
+                android:id="@+id/et_passwort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"/>
+
+            <!-- Boton: Continuar -->
+            <Button
+                android:id="@+id/btn_continuar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/btn_continue"
+                style="@style/bntPrincipal"/>
+
+            <!-- Text: Olvidar contraseña -->
+            <TextView
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textPrincipal"
+                android:layout_marginTop="12dp"
+                android:text="@string/forgot_password"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Divisor: Primera Línea -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/color_primary"/>
+
+                    <!-- Divisor: Círculo del medio-->
+                    <TextView
+                        android:id="@+id/tv_divider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/textEnlace"
+                        android:paddingHorizontal="8dp"
+                        android:text="@string/divider_or"/>
+
+                    <!-- Divisor: Segundo Línea -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/color_primary"/>
+                </LinearLayout>
+
+            <!-- Título: Registrase -->
+            <TextView
+                android:id="@+id/tv_title_Registrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_title"
+                style="@style/titlePrincipal"/>
+
+            <!-- Boton: Continuar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/btn_google"
+                style="@style/bntSecundary"
+                app:icon="@drawable/ic_google"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconSize="24dp"
+                app:iconTint="@null"/>
+
+            <!-- Text: Terminos y Condiciones -->
+            <TextView
+                android:id="@+id/tv_terminos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/textEnlace"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:text="@string/terms_and_conditions"/>
 
         </LinearLayout>
-
-        <!-- Título: Registrase -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register_title"
-            android:textColor="@color/color_text_title"
-            style="@style/titlePrincipal"/>
-
-        <!-- Boton: Continuar -->
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/btn_google"
-            style="@style/bntSecundary"
-            app:icon="@drawable/ic_google"
-            app:iconGravity="textStart"
-            app:iconPadding="12dp"
-            app:iconSize="24dp"
-            app:iconTint="@null"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            style="@style/textEnlace"
-            android:gravity="center"
-            android:textSize="11sp"
-            android:text="@string/terms_and_conditions"/>
-
-    </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
