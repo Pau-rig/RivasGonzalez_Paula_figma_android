@@ -5,7 +5,7 @@
     <color name="color_secundary">#775750</color>
     <color name="color_card_background">#D9FCE3DD</color>
     <color name="color_background_screen">#FDFBF7</color>
-
+    <color name="ic_launcher_background">#FDFBF7</color>
 
     <!-- Colores de texto -->
     <color name="color_text_title">#231917</color>

@@ -29,6 +29,12 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="textCaption">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_text_title</item>
+        <item name="android:fontFamily">@font/inter_18pt_regular</item>
+    </style>
+
     <!-- Estilo: Botones -->
     <style name="bntPrincipal">
         <item name="android:textSize">16sp</item>
